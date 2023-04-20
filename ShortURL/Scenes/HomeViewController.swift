@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 
-protocol HomeDisplay {}
+protocol HomeDisplay: AnyObject {
+    func addShortURLToView(model: ShortURL)
+}
 
 final class HomeViewController: UIViewController {
     private lazy var homeView: HomeView = {
@@ -41,4 +43,8 @@ extension HomeViewController: HomeViewDelegate {
     }
 }
 
-extension HomeViewController: HomeDisplay {}
+extension HomeViewController: HomeDisplay {
+    func addShortURLToView(model: ShortURL) {
+        
+    }
+}

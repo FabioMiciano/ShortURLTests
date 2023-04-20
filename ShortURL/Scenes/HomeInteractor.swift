@@ -12,7 +12,13 @@ protocol HomeInteracting {
 }
 
 final class HomeInteractor: HomeInteracting {
-    func pushToShortURL() {
+    private let presenter: HomePresenting
+    
+    init(presenter: HomePresenting) {
+        self.presenter = presenter
+    }
+    
+    func pushToShortURL(url: String) {
         
     }
 }

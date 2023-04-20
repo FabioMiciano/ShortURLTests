@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+protocol HomePresenting {
+    func addShortURLToView(model: ShortURL)
+}
+
+final class HomePresenter: HomePresenting {
+    weak var display: HomeDisplay?
+    
+    func addShortURLToView(model: ShortURL) {
+        display?.addShortURLToView(model: model)
+    }
+}
