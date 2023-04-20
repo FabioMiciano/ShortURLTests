@@ -16,6 +16,8 @@
 		D472671729F1D41800E9537A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472671629F1D41800E9537A /* HomeInteractor.swift */; };
 		D472671929F1D42400E9537A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472671829F1D42400E9537A /* HomePresenter.swift */; };
 		D472671D29F1D6B000E9537A /* ShortURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472671C29F1D6B000E9537A /* ShortURL.swift */; };
+		D472672229F1D7A600E9537A /* ViewConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472672129F1D7A600E9537A /* ViewConfiguration.swift */; };
+		D472672729F1D85200E9537A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472672629F1D85200E9537A /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D472671629F1D41800E9537A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		D472671829F1D42400E9537A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		D472671C29F1D6B000E9537A /* ShortURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortURL.swift; sourceTree = "<group>"; };
+		D472672129F1D7A600E9537A /* ViewConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewConfiguration.swift; sourceTree = "<group>"; };
+		D472672629F1D85200E9537A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		D472671229F1D3FB00E9537A /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				D472672529F1D84300E9537A /* Views */,
 				D472671B29F1D6A400E9537A /* Model */,
 				D472671329F1D40C00E9537A /* HomeViewController.swift */,
 				D472671629F1D41800E9537A /* HomeInteractor.swift */,
@@ -96,8 +101,17 @@
 		D472672029F1D77100E9537A /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				D472672129F1D7A600E9537A /* ViewConfiguration.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		D472672529F1D84300E9537A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D472672629F1D85200E9537A /* HomeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,11 +183,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D472672729F1D85200E9537A /* HomeView.swift in Sources */,
 				D472670029F1D09000E9537A /* ViewController.swift in Sources */,
 				D47266FC29F1D09000E9537A /* AppDelegate.swift in Sources */,
 				D47266FE29F1D09000E9537A /* SceneDelegate.swift in Sources */,
 				D472671929F1D42400E9537A /* HomePresenter.swift in Sources */,
 				D472671D29F1D6B000E9537A /* ShortURL.swift in Sources */,
+				D472672229F1D7A600E9537A /* ViewConfiguration.swift in Sources */,
 				D472671729F1D41800E9537A /* HomeInteractor.swift in Sources */,
 				D472671429F1D40C00E9537A /* HomeViewController.swift in Sources */,
 			);
