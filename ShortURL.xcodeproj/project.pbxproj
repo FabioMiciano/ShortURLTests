@@ -12,6 +12,10 @@
 		D472670029F1D09000E9537A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47266FF29F1D09000E9537A /* ViewController.swift */; };
 		D472670529F1D09A00E9537A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D472670429F1D09A00E9537A /* Assets.xcassets */; };
 		D472670829F1D09A00E9537A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D472670629F1D09A00E9537A /* LaunchScreen.storyboard */; };
+		D472671429F1D40C00E9537A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472671329F1D40C00E9537A /* HomeViewController.swift */; };
+		D472671729F1D41800E9537A /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472671629F1D41800E9537A /* HomeInteractor.swift */; };
+		D472671929F1D42400E9537A /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472671829F1D42400E9537A /* HomePresenter.swift */; };
+		D472671D29F1D6B000E9537A /* ShortURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472671C29F1D6B000E9537A /* ShortURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		D472670429F1D09A00E9537A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D472670729F1D09A00E9537A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D472670929F1D09A00E9537A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D472671329F1D40C00E9537A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		D472671629F1D41800E9537A /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		D472671829F1D42400E9537A /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		D472671C29F1D6B000E9537A /* ShortURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,8 @@
 		D47266FA29F1D09000E9537A /* ShortURL */ = {
 			isa = PBXGroup;
 			children = (
+				D472672029F1D77100E9537A /* Protocols */,
+				D472671229F1D3FB00E9537A /* Scenes */,
 				D47266FB29F1D09000E9537A /* AppDelegate.swift */,
 				D47266FD29F1D09000E9537A /* SceneDelegate.swift */,
 				D47266FF29F1D09000E9537A /* ViewController.swift */,
@@ -62,6 +72,32 @@
 				D472670929F1D09A00E9537A /* Info.plist */,
 			);
 			path = ShortURL;
+			sourceTree = "<group>";
+		};
+		D472671229F1D3FB00E9537A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D472671B29F1D6A400E9537A /* Model */,
+				D472671329F1D40C00E9537A /* HomeViewController.swift */,
+				D472671629F1D41800E9537A /* HomeInteractor.swift */,
+				D472671829F1D42400E9537A /* HomePresenter.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D472671B29F1D6A400E9537A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D472671C29F1D6B000E9537A /* ShortURL.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D472672029F1D77100E9537A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +172,10 @@
 				D472670029F1D09000E9537A /* ViewController.swift in Sources */,
 				D47266FC29F1D09000E9537A /* AppDelegate.swift in Sources */,
 				D47266FE29F1D09000E9537A /* SceneDelegate.swift in Sources */,
+				D472671929F1D42400E9537A /* HomePresenter.swift in Sources */,
+				D472671D29F1D6B000E9537A /* ShortURL.swift in Sources */,
+				D472671729F1D41800E9537A /* HomeInteractor.swift in Sources */,
+				D472671429F1D40C00E9537A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
