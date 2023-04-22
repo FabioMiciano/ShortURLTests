@@ -1,0 +1,6 @@
+framework module SFFontFeatures {
+  umbrella header "SFFontFeatures-umbrella.h"
+
+  export *
+  module * { export * }
+}

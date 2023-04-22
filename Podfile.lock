@@ -1,0 +1,20 @@
+PODS:
+  - SFFontFeatures (1.0.2)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - SFFontFeatures
+  - SnapKit (~> 5.0.0)
+
+SPEC REPOS:
+  trunk:
+    - SFFontFeatures
+    - SnapKit
+
+SPEC CHECKSUMS:
+  SFFontFeatures: 070f669efd39035022f8c76a6c02da0975c814c2
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 2f7203c4d20d036b458375e901508d736939cfd9
+
+COCOAPODS: 1.12.1
