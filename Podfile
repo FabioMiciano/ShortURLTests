@@ -4,5 +4,6 @@ source 'https://cdn.cocoapods.org/'
 use_frameworks!
 target 'ShortURL' do
   pod 'SnapKit', '~> 5.0.0'
+  pod 'SwiftLint'
   pod 'SFFontFeatures'
 end
