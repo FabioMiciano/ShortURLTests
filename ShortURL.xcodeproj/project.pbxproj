@@ -20,6 +20,12 @@
 		D472672729F1D85200E9537A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D472672629F1D85200E9537A /* HomeView.swift */; };
 		D48933EC29F700880008DAE0 /* PreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48933EB29F700880008DAE0 /* PreviewView.swift */; };
 		D48933F029F700B00008DAE0 /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48933EF29F700B00008DAE0 /* PreviewViewController.swift */; };
+		D48933F429F702050008DAE0 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48933F329F702050008DAE0 /* APIError.swift */; };
+		D48933F829F702E50008DAE0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48933F729F702E50008DAE0 /* NetworkManager.swift */; };
+		D48933FB29F703770008DAE0 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48933FA29F703770008DAE0 /* EndPoint.swift */; };
+		D48933FE29F704910008DAE0 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48933FD29F704910008DAE0 /* APIRoute.swift */; };
+		D489340129F705110008DAE0 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489340029F705110008DAE0 /* Method.swift */; };
+		D489340429F7081C0008DAE0 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489340329F7081C0008DAE0 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,12 @@
 		D472672629F1D85200E9537A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D48933EB29F700880008DAE0 /* PreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewView.swift; sourceTree = "<group>"; };
 		D48933EF29F700B00008DAE0 /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		D48933F329F702050008DAE0 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		D48933F729F702E50008DAE0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D48933FA29F703770008DAE0 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		D48933FD29F704910008DAE0 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
+		D489340029F705110008DAE0 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
+		D489340329F7081C0008DAE0 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +104,7 @@
 		D47266FA29F1D09000E9537A /* ShortURL */ = {
 			isa = PBXGroup;
 			children = (
+				D48933F229F701D70008DAE0 /* Network */,
 				D48933EA29F7006A0008DAE0 /* Utils */,
 				D472672029F1D77100E9537A /* Protocols */,
 				D472671229F1D3FB00E9537A /* Scenes */,
@@ -147,6 +160,19 @@
 				D48933EF29F700B00008DAE0 /* PreviewViewController.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D48933F229F701D70008DAE0 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D48933F329F702050008DAE0 /* APIError.swift */,
+				D48933F729F702E50008DAE0 /* NetworkManager.swift */,
+				D48933FA29F703770008DAE0 /* EndPoint.swift */,
+				D48933FD29F704910008DAE0 /* APIRoute.swift */,
+				D489340029F705110008DAE0 /* Method.swift */,
+				D489340329F7081C0008DAE0 /* Parser.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,16 +288,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48933FB29F703770008DAE0 /* EndPoint.swift in Sources */,
+				D48933F829F702E50008DAE0 /* NetworkManager.swift in Sources */,
 				D472672729F1D85200E9537A /* HomeView.swift in Sources */,
 				D47266FC29F1D09000E9537A /* AppDelegate.swift in Sources */,
+				D489340429F7081C0008DAE0 /* Parser.swift in Sources */,
 				D48933EC29F700880008DAE0 /* PreviewView.swift in Sources */,
+				D489340129F705110008DAE0 /* Method.swift in Sources */,
 				D48933F029F700B00008DAE0 /* PreviewViewController.swift in Sources */,
 				D47266FE29F1D09000E9537A /* SceneDelegate.swift in Sources */,
 				D472671929F1D42400E9537A /* HomePresenter.swift in Sources */,
 				D472671D29F1D6B000E9537A /* ShortURL.swift in Sources */,
 				D472672229F1D7A600E9537A /* ViewConfiguration.swift in Sources */,
+				D48933FE29F704910008DAE0 /* APIRoute.swift in Sources */,
 				D472671729F1D41800E9537A /* HomeInteractor.swift in Sources */,
 				D472671429F1D40C00E9537A /* HomeViewController.swift in Sources */,
+				D48933F429F702050008DAE0 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
