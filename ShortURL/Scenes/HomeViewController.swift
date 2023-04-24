@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 
 protocol HomeDisplay: AnyObject {
     func addShortURLToView(model: ShortURL)
@@ -48,3 +49,18 @@ extension HomeViewController: HomeDisplay {
         
     }
 }
+
+#if DEBUG
+struct HomeViewController_Preview: PreviewProvider {
+    static var previews: some View {
+        UIViewControllerPreview {
+            let presenter = HomePresenter()
+            let interactor = HomeInteractor(presenter: presenter)
+            let controller = HomeViewController(interactor: interactor)
+            presenter.display = controller
+            let navigation = UINavigationController(rootViewController: controller)
+            return navigation
+        }
+    }
+}
+#endif

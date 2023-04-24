@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftUI
 import SnapKit
 
 protocol HomeViewDelegate: AnyObject {
@@ -136,3 +137,14 @@ extension HomeView: UICollectionViewDataSource {
         return cell
     }
 }
+
+#if DEBUG
+struct HomeView_Preview: PreviewProvider {
+    static var previews: some View {
+        UIViewPreview {
+            let view = HomeView()
+            return view
+        }
+    }
+}
+#endif
