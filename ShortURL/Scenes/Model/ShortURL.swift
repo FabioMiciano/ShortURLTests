@@ -1,10 +1,3 @@
-//
-//  ShortURL.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 20/04/23.
-//
-
 struct ShortURL: Codable {
     let alias: String
     let link: Link

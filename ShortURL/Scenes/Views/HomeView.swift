@@ -1,19 +1,14 @@
-//
-//  HomeView.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 20/04/23.
-//
-
 import Foundation
 import UIKit
 import SwiftUI
 import SnapKit
 
+// PRAGMA MARK: -- HOME VIEW DELEGATE --
 protocol HomeViewDelegate: AnyObject {
     func pushToShort(url: String)
 }
 
+// PRAGMA MARK: -- LAYOUT CONSTANTS --
 extension HomeView.Layout {
     enum Offset {
         static let base08: CGFloat = 8
@@ -28,6 +23,7 @@ extension HomeView.Layout {
 final class HomeView: UIView {
     fileprivate enum Layout {}
     
+// PRAGMA MARK: -- LAYOUT COMPONENTS --
     private lazy var urlTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "http://www.google.com"
@@ -65,12 +61,14 @@ final class HomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+// PRAGMA MARK: -- PUBLIC FUNCS --
     func apeendShortURL(model: ShortURL) {
         dataSource.append(model)
         collection.reloadData()
     }
 }
 
+// PRAGMA MARK: -- BUILDING LAYOUT --
 extension HomeView: ViewConfiguration {
     func createHyerarchy() {
         addSubview(urlTextField)
@@ -102,6 +100,7 @@ extension HomeView: ViewConfiguration {
     }
 }
 
+// PRAGMA MARK: -- BUTTON ACTIONS --
 @objc
 private extension HomeView {
     func actionShortURL() {
@@ -110,6 +109,7 @@ private extension HomeView {
     }
 }
 
+// PRAGMA MARK: -- PRIVATE FUNCS --
 private extension HomeView {
     func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
@@ -131,6 +131,7 @@ private extension HomeView {
     }
 }
 
+// PRAGMA MARK: -- COLLECTION VIEW DATASOURCE --
 extension HomeView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataSource.count
@@ -144,6 +145,7 @@ extension HomeView: UICollectionViewDataSource {
     }
 }
 
+// PRAGMA MARK: -- SWIFTUI PREVIEW ONLY DEV --
 #if DEBUG
 struct HomeView_Preview: PreviewProvider {
     static var previews: some View {
