@@ -10,6 +10,7 @@ import Foundation
 protocol HomePresenting {
     func addShortURLToView(model: ShortURL)
     func showError(error: APIError)
+    func loadLocalList(dataSource: [ShortURL])
 }
 
 final class HomePresenter: HomePresenting {
@@ -28,5 +29,9 @@ final class HomePresenter: HomePresenting {
         default:
             display?.showErrorSnackBar(error: "Ops, algo deu errado, tente novamente")
         }
+    }
+    
+    func loadLocalList(dataSource: [ShortURL]) {
+        display?.loadLocal(dataSource: dataSource)
     }
 }

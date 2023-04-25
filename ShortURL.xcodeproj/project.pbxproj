@@ -32,6 +32,7 @@
 		D49ADA7529F82FFD00A5C8B5 /* UIViewController+SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7429F82FFD00A5C8B5 /* UIViewController+SnackBar.swift */; };
 		D49ADA7A29F8303E00A5C8B5 /* SnackBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7929F8303E00A5C8B5 /* SnackBarManager.swift */; };
 		D49ADA7D29F8307E00A5C8B5 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7C29F8307E00A5C8B5 /* SnackBar.swift */; };
+		D49ADA8129F8506F00A5C8B5 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA8029F8506F00A5C8B5 /* LocalDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		D49ADA7429F82FFD00A5C8B5 /* UIViewController+SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SnackBar.swift"; sourceTree = "<group>"; };
 		D49ADA7929F8303E00A5C8B5 /* SnackBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarManager.swift; sourceTree = "<group>"; };
 		D49ADA7C29F8307E00A5C8B5 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
+		D49ADA8029F8506F00A5C8B5 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		D47266FA29F1D09000E9537A /* ShortURL */ = {
 			isa = PBXGroup;
 			children = (
+				D49ADA7F29F8506000A5C8B5 /* Local */,
 				D49ADA7729F8301600A5C8B5 /* Components */,
 				D48933F229F701D70008DAE0 /* Network */,
 				D48933EA29F7006A0008DAE0 /* Utils */,
@@ -215,6 +218,14 @@
 				D49ADA7C29F8307E00A5C8B5 /* SnackBar.swift */,
 			);
 			path = SnackBar;
+			sourceTree = "<group>";
+		};
+		D49ADA7F29F8506000A5C8B5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADA8029F8506F00A5C8B5 /* LocalDataManager.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 				D489340429F7081C0008DAE0 /* Parser.swift in Sources */,
 				D48933EC29F700880008DAE0 /* PreviewView.swift in Sources */,
 				D489340129F705110008DAE0 /* Method.swift in Sources */,
+				D49ADA8129F8506F00A5C8B5 /* LocalDataManager.swift in Sources */,
 				D48933F029F700B00008DAE0 /* PreviewViewController.swift in Sources */,
 				D47266FE29F1D09000E9537A /* SceneDelegate.swift in Sources */,
 				D49ADA7A29F8303E00A5C8B5 /* SnackBarManager.swift in Sources */,

@@ -9,13 +9,17 @@ import Foundation
 
 protocol HomeServicing {
     func submitURLToShort(url: String, completion: @escaping(Result<ShortURL, APIError>) -> Void)
+    func saveLocalDataSource(item: ShortURL) throws
+    func loadLocalDataSource() throws -> [ShortURL]
 }
 
 final class HomeService: HomeServicing {
     private let network: NetworkManaging
+    private let local: LocalDataManaging
     
-    init(network: NetworkManaging = NetworkManager()) {
+    init(network: NetworkManaging = NetworkManager(), local: LocalDataManaging = LocalDataManager(key: "ShortURL")) {
         self.network = network
+        self.local = local
     }
     
     func submitURLToShort(url: String, completion: @escaping(Result<ShortURL, APIError>) -> Void) {
@@ -30,5 +34,14 @@ final class HomeService: HomeServicing {
                 }
             }
         }
+    }
+    
+    func saveLocalDataSource(item: ShortURL) throws {
+        try local.save(item: item)
+    }
+    
+    func loadLocalDataSource() throws -> [ShortURL] {
+        let dataSource: [ShortURL] = try local.load()
+        return dataSource
     }
 }

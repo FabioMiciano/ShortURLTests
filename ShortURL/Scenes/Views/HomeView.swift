@@ -66,6 +66,11 @@ final class HomeView: UIView {
         dataSource.append(model)
         collection.reloadData()
     }
+    
+    func loadList(dataSource: [ShortURL]) {
+        self.dataSource = dataSource
+        collection.reloadData()
+    }
 }
 
 // PRAGMA MARK: -- BUILDING LAYOUT --

@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomeInteracting {
     func pushToShortURL(url: String)
+    func loadLocalList()
 }
 
 final class HomeInteractor: HomeInteracting {
@@ -25,9 +26,28 @@ final class HomeInteractor: HomeInteracting {
             switch result {
             case let .success(model):
                 self?.presenter.addShortURLToView(model: model)
+                self?.saveLocal(model: model)
             case let .failure(error):
                 self?.presenter.showError(error: error)
             }
+        }
+    }
+    
+    func loadLocalList(){
+        do {
+            let dataSource = try service.loadLocalDataSource()
+            presenter.loadLocalList(dataSource: dataSource)
+        } catch {
+            presenter.showError(error: .decodingFailed)
+        }
+    }
+    
+    private func saveLocal(model: ShortURL) {
+        do {
+            try service.saveLocalDataSource(item: model)
+        } catch {
+            // TODO: AQUI FARIA O USO DO FIREBASE, BUGSNAG OU ALGUMA FERRAMENTA DE TRACKS PARA INFORMAR O ERRO DO CATCH AO SALVAR A INFORMACAO LOCAL
+            print("DISPARO PARA  ALGUMA FERRAMENTA DE TRACK")
         }
     }
 }

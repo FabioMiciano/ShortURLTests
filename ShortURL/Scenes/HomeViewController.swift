@@ -4,6 +4,7 @@ import SwiftUI
 
 // PRAGMA MARK: -- PROTOCOL TO UPDATE VIEW --
 protocol HomeDisplay: AnyObject {
+    func loadLocal(dataSource: [ShortURL])
     func addShortURLToView(model: ShortURL)
     func showErrorSnackBar(error: String)
 }
@@ -35,6 +36,7 @@ final class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        interactor.loadLocalList()
     }
 }
 
@@ -54,6 +56,10 @@ extension HomeViewController: HomeDisplay {
     
     func addShortURLToView(model: ShortURL) {
         homeView.apeendShortURL(model: model)
+    }
+    
+    func loadLocal(dataSource: [ShortURL]) {
+        homeView.loadList(dataSource: dataSource)
     }
 }
 
