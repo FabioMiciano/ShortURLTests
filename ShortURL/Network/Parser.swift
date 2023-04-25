@@ -1,10 +1,3 @@
-//
-//  Parser.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 24/04/23.
-//
-
 import Foundation
 
 protocol Parser {

@@ -1,10 +1,3 @@
-//
-//  NetworkManager.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 24/04/23.
-//
-
 import Foundation
 
 protocol NetworkManaging {
@@ -21,7 +14,8 @@ final class NetworkManager: NetworkManaging {
         self.session = session
         self.parser = parser
     }
-    
+
+// PRAGMA MARK: -- PUBLIC FUNTIONS --
     func execute<T: Codable>(from endpoint: APIRoute, completion: @escaping (Result<T, APIError>) -> Void) {
         guard let url = baseURL?.appendingPathComponent(endpoint.path) else { return }
         var request = URLRequest(url: url)
@@ -31,7 +25,6 @@ final class NetworkManager: NetworkManaging {
         if let parameters = endpoint.parameters {
             request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
         }
-        
         
         session.dataTask(with: request) {[weak self] (data, response, error) in
             if let hasError = self?.isError(error: error, response: response) {
@@ -56,8 +49,11 @@ final class NetworkManager: NetworkManaging {
             }
         }.resume()
     }
-    
-    private func isError(error: Error?, response: URLResponse?) -> APIError? {
+}
+
+// PRAGMA MARK: -- PRIVATE FUNCTIONS --
+private extension NetworkManager {
+    func isError(error: Error?, response: URLResponse?) -> APIError? {
         if let error = error {
             return .requestFailed(error: error)
         }
