@@ -44,14 +44,14 @@ final class HomeView: UIView {
     }()
     
     private lazy var collection: UICollectionView = {
-            let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
-            collectionView.backgroundColor = .white
-            collectionView.dataSource = self
-            collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "URLCell")
-            return collectionView
-        }()
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: createLayout())
+        collectionView.backgroundColor = .clear
+        collectionView.dataSource = self
+        collectionView.register(HomeViewCell.self, forCellWithReuseIdentifier: HomeViewCell.identifier)
+        return collectionView
+    }()
     
-    private let dataSource: [ShortURL] = []
+    private var dataSource: [ShortURL] = []
     
     weak var delegate: HomeViewDelegate?
     
@@ -63,6 +63,11 @@ final class HomeView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func apeendShortURL(model: ShortURL) {
+        dataSource.append(model)
+        collection.reloadData()
     }
 }
 
@@ -93,7 +98,7 @@ extension HomeView: ViewConfiguration {
     }
     
     func setupViewConfiguration() {
-        backgroundColor = .white
+        backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00)
     }
 }
 
@@ -117,7 +122,7 @@ private extension HomeView {
         )
         item.contentInsets = itemInsets
         
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(Layout.Size.base52))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(68))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         
         let section = NSCollectionLayoutSection(group: group)
@@ -132,8 +137,9 @@ extension HomeView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "URLCell", for: indexPath)
-        cell.backgroundColor = .blue
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeViewCell.identifier, for: indexPath) as? HomeViewCell else { return UICollectionViewCell() }
+        let model = dataSource[indexPath.row]
+        cell.setup(shortURL: model.link.short, originURL: model.link.original)
         return cell
     }
 }

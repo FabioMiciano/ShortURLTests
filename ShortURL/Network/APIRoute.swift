@@ -13,7 +13,7 @@ enum APIRoute: EndPoint {
     var path: String {
         switch self {
         case .submit:
-            return ""
+            return "api/alias"
         }
     }
     
@@ -26,8 +26,8 @@ enum APIRoute: EndPoint {
     
     var parameters: [String : Any]? {
         switch self {
-        case .submit:
-            return nil
+        case let .submit(url):
+            return ["url": url]
         }
     }
     

@@ -11,6 +11,7 @@ import SwiftUI
 
 protocol HomeDisplay: AnyObject {
     func addShortURLToView(model: ShortURL)
+    func showErrorSnackBar(error: String)
 }
 
 final class HomeViewController: UIViewController {
@@ -36,6 +37,10 @@ final class HomeViewController: UIViewController {
         super.loadView()
         view = homeView
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 }
 
 extension HomeViewController: HomeViewDelegate {
@@ -45,8 +50,12 @@ extension HomeViewController: HomeViewDelegate {
 }
 
 extension HomeViewController: HomeDisplay {
-    func addShortURLToView(model: ShortURL) {
+    func showErrorSnackBar(error: String) {
         
+    }
+    
+    func addShortURLToView(model: ShortURL) {
+        homeView.apeendShortURL(model: model)
     }
 }
 
@@ -54,8 +63,9 @@ extension HomeViewController: HomeDisplay {
 struct HomeViewController_Preview: PreviewProvider {
     static var previews: some View {
         UIViewControllerPreview {
+            let service = HomeService()
             let presenter = HomePresenter()
-            let interactor = HomeInteractor(presenter: presenter)
+            let interactor = HomeInteractor(service: service, presenter: presenter)
             let controller = HomeViewController(interactor: interactor)
             presenter.display = controller
             let navigation = UINavigationController(rootViewController: controller)

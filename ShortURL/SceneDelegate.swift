@@ -16,8 +16,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
         let presenter = HomePresenter()
-        let interactor = HomeInteractor(presenter: presenter)
+        let service = HomeService()
+        let interactor = HomeInteractor(service: service, presenter: presenter)
         let controller = HomeViewController(interactor: interactor)
+        presenter.display = controller
         let navigation = UINavigationController(rootViewController: controller)
         
         window?.rootViewController = navigation

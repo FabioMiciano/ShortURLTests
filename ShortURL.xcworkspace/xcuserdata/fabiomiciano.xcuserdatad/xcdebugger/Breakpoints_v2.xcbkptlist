@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "705A72D9-C07A-4DFB-A3F5-C0F17193B906"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD3004E5-4616-4794-9CAC-932D5C1602B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShortURL/Network/NetworkManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "execute(from:completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BD3004E5-4616-4794-9CAC-932D5C1602B6 - 752db6f8f7c8e8ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ShortURL.NetworkManager.execute&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(from: ShortURL.APIRoute, completion: (Swift.Result&lt;A, ShortURL.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShortURL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabiomiciano/Desktop/Desenvolvimento/ShortURL/ShortURL/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "1488">
+               </Location>
+               <Location
+                  uuid = "BD3004E5-4616-4794-9CAC-932D5C1602B6 - b6a8baf918674dab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShortURL.NetworkManager.execute&lt;A where A: Swift.Decodable, A: Swift.Encodable&gt;(from: ShortURL.APIRoute, completion: (Swift.Result&lt;A, ShortURL.APIError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ShortURL"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fabiomiciano/Desktop/Desenvolvimento/ShortURL/ShortURL/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "453">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

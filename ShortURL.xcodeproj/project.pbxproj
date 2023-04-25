@@ -26,6 +26,8 @@
 		D48933FE29F704910008DAE0 /* APIRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48933FD29F704910008DAE0 /* APIRoute.swift */; };
 		D489340129F705110008DAE0 /* Method.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489340029F705110008DAE0 /* Method.swift */; };
 		D489340429F7081C0008DAE0 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489340329F7081C0008DAE0 /* Parser.swift */; };
+		D489340729F70E1F0008DAE0 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489340629F70E1F0008DAE0 /* HomeService.swift */; };
+		D49ADA6F29F7495B00A5C8B5 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA6E29F7495B00A5C8B5 /* HomeViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,8 @@
 		D48933FD29F704910008DAE0 /* APIRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRoute.swift; sourceTree = "<group>"; };
 		D489340029F705110008DAE0 /* Method.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Method.swift; sourceTree = "<group>"; };
 		D489340329F7081C0008DAE0 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		D489340629F70E1F0008DAE0 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
+		D49ADA6E29F7495B00A5C8B5 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 				D472671329F1D40C00E9537A /* HomeViewController.swift */,
 				D472671629F1D41800E9537A /* HomeInteractor.swift */,
 				D472671829F1D42400E9537A /* HomePresenter.swift */,
+				D489340629F70E1F0008DAE0 /* HomeService.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 		D472672529F1D84300E9537A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D49ADA6D29F7494A00A5C8B5 /* Cells */,
 				D472672629F1D85200E9537A /* HomeView.swift */,
 			);
 			path = Views;
@@ -173,6 +179,14 @@
 				D489340329F7081C0008DAE0 /* Parser.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		D49ADA6D29F7494A00A5C8B5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADA6E29F7495B00A5C8B5 /* HomeViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,12 +312,14 @@
 				D48933F029F700B00008DAE0 /* PreviewViewController.swift in Sources */,
 				D47266FE29F1D09000E9537A /* SceneDelegate.swift in Sources */,
 				D472671929F1D42400E9537A /* HomePresenter.swift in Sources */,
+				D489340729F70E1F0008DAE0 /* HomeService.swift in Sources */,
 				D472671D29F1D6B000E9537A /* ShortURL.swift in Sources */,
 				D472672229F1D7A600E9537A /* ViewConfiguration.swift in Sources */,
 				D48933FE29F704910008DAE0 /* APIRoute.swift in Sources */,
 				D472671729F1D41800E9537A /* HomeInteractor.swift in Sources */,
 				D472671429F1D40C00E9537A /* HomeViewController.swift in Sources */,
 				D48933F429F702050008DAE0 /* APIError.swift in Sources */,
+				D49ADA6F29F7495B00A5C8B5 /* HomeViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

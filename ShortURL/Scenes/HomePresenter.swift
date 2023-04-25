@@ -9,6 +9,7 @@ import Foundation
 
 protocol HomePresenting {
     func addShortURLToView(model: ShortURL)
+    func showError(error: APIError)
 }
 
 final class HomePresenter: HomePresenting {
@@ -16,5 +17,9 @@ final class HomePresenter: HomePresenting {
     
     func addShortURLToView(model: ShortURL) {
         display?.addShortURLToView(model: model)
+    }
+    
+    func showError(error: APIError) {
+        display?.showErrorSnackBar(error: "")
     }
 }
