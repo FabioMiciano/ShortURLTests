@@ -1,31 +1,44 @@
-//
-//  HomeViewCell.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 24/04/23.
-//
-
 import Foundation
 import UIKit
 import SnapKit
 import SwiftUI
 
+// PRAGMA MARK: -- LAYOUT CONSTANTS --
+extension HomeViewCell.Layout {
+    enum Font {
+        static let title: CGFloat = 16
+        static let subTitle: CGFloat = 14
+    }
+    
+    enum Offset {
+        static let base08: CGFloat = 8
+    }
+    
+    enum Size {
+        static let cornerRadius: CGFloat = 5
+    }
+}
+
 final class HomeViewCell: UICollectionViewCell {
+    fileprivate enum Layout {}
+    
     static let identifier = String(describing: HomeViewCell.self)
     
+// PRAGMA MARK: -- LAYOUT COMPONENTS --
     private lazy var shortURL: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: Layout.Font.title, weight: .semibold)
         return label
     }()
     
     private lazy var originURL: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 14, weight: .light)
+        label.font = UIFont.systemFont(ofSize: Layout.Font.subTitle, weight: .light)
         label.textColor = .darkGray
         return label
     }()
     
+// PRAGMA MARK: -- PUBLIC FUNCS --
     func setup(shortURL: String, originURL: String) {
         self.shortURL.text = shortURL
         self.originURL.text = originURL
@@ -33,6 +46,7 @@ final class HomeViewCell: UICollectionViewCell {
     }
 }
 
+// PRAGMA MARK: -- BUILDING LAYOUT --
 extension HomeViewCell: ViewConfiguration {
     func createHyerarchy() {
         addSubview(shortURL)
@@ -41,22 +55,23 @@ extension HomeViewCell: ViewConfiguration {
     
     func setupConstraints() {
         shortURL.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(8)
-            $0.leading.trailing.equalToSuperview().inset(8)
+            $0.top.equalToSuperview().offset(Layout.Offset.base08)
+            $0.leading.trailing.equalToSuperview().inset(Layout.Offset.base08)
         }
         
         originURL.snp.makeConstraints {
-            $0.top.equalTo(shortURL.snp.bottom).offset(8)
-            $0.leading.trailing.bottom.equalToSuperview().inset(8)
+            $0.top.equalTo(shortURL.snp.bottom).offset(Layout.Offset.base08)
+            $0.leading.trailing.bottom.equalToSuperview().inset(Layout.Offset.base08)
         }
     }
     
     func setupViewConfiguration() {
         backgroundColor = .white
-        layer.cornerRadius = 5
+        layer.cornerRadius = Layout.Size.cornerRadius
     }
 }
 
+// PRAGMA MARK: -- SWIFTUI PREVIEW ONLY DEV --
 #if DEBUG
 struct HomeViewCell_Preview: PreviewProvider {
     static var previews: some View {

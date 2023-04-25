@@ -28,6 +28,7 @@
 		D489340429F7081C0008DAE0 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489340329F7081C0008DAE0 /* Parser.swift */; };
 		D489340729F70E1F0008DAE0 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489340629F70E1F0008DAE0 /* HomeService.swift */; };
 		D49ADA6F29F7495B00A5C8B5 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA6E29F7495B00A5C8B5 /* HomeViewCell.swift */; };
+		D49ADA7229F8299800A5C8B5 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7129F8299800A5C8B5 /* HomeFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		D489340329F7081C0008DAE0 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		D489340629F70E1F0008DAE0 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		D49ADA6E29F7495B00A5C8B5 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		D49ADA7129F8299800A5C8B5 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				D472671629F1D41800E9537A /* HomeInteractor.swift */,
 				D472671829F1D42400E9537A /* HomePresenter.swift */,
 				D489340629F70E1F0008DAE0 /* HomeService.swift */,
+				D49ADA7129F8299800A5C8B5 /* HomeFactory.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				D472671729F1D41800E9537A /* HomeInteractor.swift in Sources */,
 				D472671429F1D40C00E9537A /* HomeViewController.swift in Sources */,
 				D48933F429F702050008DAE0 /* APIError.swift in Sources */,
+				D49ADA7229F8299800A5C8B5 /* HomeFactory.swift in Sources */,
 				D49ADA6F29F7495B00A5C8B5 /* HomeViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

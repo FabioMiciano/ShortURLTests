@@ -1,27 +1,14 @@
-//
-//  SceneDelegate.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 20/04/23.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    private lazy var controller = HomeFactory.make()
+    private lazy var navigation = UINavigationController(rootViewController: controller)
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let presenter = HomePresenter()
-        let service = HomeService()
-        let interactor = HomeInteractor(service: service, presenter: presenter)
-        let controller = HomeViewController(interactor: interactor)
-        presenter.display = controller
-        let navigation = UINavigationController(rootViewController: controller)
-        
         window?.rootViewController = navigation
         window?.makeKeyAndVisible()
     }
