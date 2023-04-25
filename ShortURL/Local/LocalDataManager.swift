@@ -1,10 +1,3 @@
-//
-//  LocalDataManager.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 25/04/23.
-//
-
 import Foundation
 
 protocol LocalDataManaging {
@@ -13,7 +6,6 @@ protocol LocalDataManaging {
 }
 
 final class LocalDataManager: LocalDataManaging {
-    
     private let userDefaults: UserDefaults
     private let key: String
     
@@ -22,6 +14,7 @@ final class LocalDataManager: LocalDataManaging {
         self.key = key
     }
  
+// PRAGMA MARK: -- PUBLIC FUNTIONS --
     func save<T>(item: T) throws where T : Decodable, T : Encodable {
         var list:[T] = try load()
         list.append(item)
