@@ -68,7 +68,7 @@ final class NetworkManager: NetworkManaging {
         
         guard (200...299).contains(httpResponse.statusCode) else {
             let message = HTTPURLResponse.localizedString(forStatusCode: httpResponse.statusCode)
-            return .requestFailed(statusCode: httpResponse.statusCode, message: message)
+            return .requestFailedWith(statusCode: httpResponse.statusCode, message: message)
         }
         
         return nil

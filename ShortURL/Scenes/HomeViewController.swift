@@ -48,7 +48,8 @@ extension HomeViewController: HomeViewDelegate {
 //PRAGMA MARK: -- HOMEDISPLAY PROTOCOL IMPLEMENTATION --
 extension HomeViewController: HomeDisplay {
     func showErrorSnackBar(error: String) {
-        
+        let snackBar = Snackbar(title: error, type: .error)
+        showSnackBar(snackBar)
     }
     
     func addShortURLToView(model: ShortURL) {

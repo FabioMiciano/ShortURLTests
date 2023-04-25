@@ -20,6 +20,13 @@ final class HomePresenter: HomePresenting {
     }
     
     func showError(error: APIError) {
-        display?.showErrorSnackBar(error: "")
+        switch error {
+        case .requestFailedWith(let statusCode, let message):
+            display?.showErrorSnackBar(error: "CODE: \(statusCode) | \(message)")
+        case let .requestFailed(error):
+            display?.showErrorSnackBar(error: error.localizedDescription)
+        default:
+            display?.showErrorSnackBar(error: "Ops, algo deu errado, tente novamente")
+        }
     }
 }

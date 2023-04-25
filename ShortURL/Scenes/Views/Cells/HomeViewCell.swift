@@ -68,6 +68,7 @@ extension HomeViewCell: ViewConfiguration {
     func setupViewConfiguration() {
         backgroundColor = .white
         layer.cornerRadius = Layout.Size.cornerRadius
+        layer.masksToBounds = true 
     }
 }
 

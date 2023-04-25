@@ -29,6 +29,9 @@
 		D489340729F70E1F0008DAE0 /* HomeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D489340629F70E1F0008DAE0 /* HomeService.swift */; };
 		D49ADA6F29F7495B00A5C8B5 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA6E29F7495B00A5C8B5 /* HomeViewCell.swift */; };
 		D49ADA7229F8299800A5C8B5 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7129F8299800A5C8B5 /* HomeFactory.swift */; };
+		D49ADA7529F82FFD00A5C8B5 /* UIViewController+SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7429F82FFD00A5C8B5 /* UIViewController+SnackBar.swift */; };
+		D49ADA7A29F8303E00A5C8B5 /* SnackBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7929F8303E00A5C8B5 /* SnackBarManager.swift */; };
+		D49ADA7D29F8307E00A5C8B5 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7C29F8307E00A5C8B5 /* SnackBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		D489340629F70E1F0008DAE0 /* HomeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeService.swift; sourceTree = "<group>"; };
 		D49ADA6E29F7495B00A5C8B5 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
 		D49ADA7129F8299800A5C8B5 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
+		D49ADA7429F82FFD00A5C8B5 /* UIViewController+SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SnackBar.swift"; sourceTree = "<group>"; };
+		D49ADA7929F8303E00A5C8B5 /* SnackBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarManager.swift; sourceTree = "<group>"; };
+		D49ADA7C29F8307E00A5C8B5 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 		D47266FA29F1D09000E9537A /* ShortURL */ = {
 			isa = PBXGroup;
 			children = (
+				D49ADA7729F8301600A5C8B5 /* Components */,
 				D48933F229F701D70008DAE0 /* Network */,
 				D48933EA29F7006A0008DAE0 /* Utils */,
 				D472672029F1D77100E9537A /* Protocols */,
@@ -190,6 +197,24 @@
 				D49ADA6E29F7495B00A5C8B5 /* HomeViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		D49ADA7729F8301600A5C8B5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADA7829F8301D00A5C8B5 /* SnackBar */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D49ADA7829F8301D00A5C8B5 /* SnackBar */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADA7429F82FFD00A5C8B5 /* UIViewController+SnackBar.swift */,
+				D49ADA7929F8303E00A5C8B5 /* SnackBarManager.swift */,
+				D49ADA7C29F8307E00A5C8B5 /* SnackBar.swift */,
+			);
+			path = SnackBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,12 +339,15 @@
 				D489340129F705110008DAE0 /* Method.swift in Sources */,
 				D48933F029F700B00008DAE0 /* PreviewViewController.swift in Sources */,
 				D47266FE29F1D09000E9537A /* SceneDelegate.swift in Sources */,
+				D49ADA7A29F8303E00A5C8B5 /* SnackBarManager.swift in Sources */,
 				D472671929F1D42400E9537A /* HomePresenter.swift in Sources */,
 				D489340729F70E1F0008DAE0 /* HomeService.swift in Sources */,
 				D472671D29F1D6B000E9537A /* ShortURL.swift in Sources */,
 				D472672229F1D7A600E9537A /* ViewConfiguration.swift in Sources */,
+				D49ADA7D29F8307E00A5C8B5 /* SnackBar.swift in Sources */,
 				D48933FE29F704910008DAE0 /* APIRoute.swift in Sources */,
 				D472671729F1D41800E9537A /* HomeInteractor.swift in Sources */,
+				D49ADA7529F82FFD00A5C8B5 /* UIViewController+SnackBar.swift in Sources */,
 				D472671429F1D40C00E9537A /* HomeViewController.swift in Sources */,
 				D48933F429F702050008DAE0 /* APIError.swift in Sources */,
 				D49ADA7229F8299800A5C8B5 /* HomeFactory.swift in Sources */,
