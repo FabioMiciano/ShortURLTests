@@ -33,7 +33,18 @@
 		D49ADA7A29F8303E00A5C8B5 /* SnackBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7929F8303E00A5C8B5 /* SnackBarManager.swift */; };
 		D49ADA7D29F8307E00A5C8B5 /* SnackBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA7C29F8307E00A5C8B5 /* SnackBar.swift */; };
 		D49ADA8129F8506F00A5C8B5 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA8029F8506F00A5C8B5 /* LocalDataManager.swift */; };
+		D49ADA9629F8604F00A5C8B5 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA9529F8604F00A5C8B5 /* HomeInteractorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D49ADA8D29F85E2A00A5C8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D47266F029F1D09000E9537A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D47266F729F1D09000E9537A;
+			remoteInfo = ShortURL;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		34801A51430B8754E526C621 /* Pods-ShortURL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortURL.debug.xcconfig"; path = "Target Support Files/Pods-ShortURL/Pods-ShortURL.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +77,9 @@
 		D49ADA7929F8303E00A5C8B5 /* SnackBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBarManager.swift; sourceTree = "<group>"; };
 		D49ADA7C29F8307E00A5C8B5 /* SnackBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnackBar.swift; sourceTree = "<group>"; };
 		D49ADA8029F8506F00A5C8B5 /* LocalDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManager.swift; sourceTree = "<group>"; };
+		D49ADA8829F85E2A00A5C8B5 /* ShortURLTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortURLTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49ADA8C29F85E2A00A5C8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49ADA9529F8604F00A5C8B5 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +88,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFA8D7820858FBBF3C90D6EE /* Pods_ShortURL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49ADA8529F85E2A00A5C8B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				D47266FA29F1D09000E9537A /* ShortURL */,
+				D49ADA8929F85E2A00A5C8B5 /* ShortURLTests */,
 				D47266F929F1D09000E9537A /* Products */,
 				410D3F6D88571DFBEBAAEFF0 /* Pods */,
 				90CEFA6EE25D1B4A05A6EA6C /* Frameworks */,
@@ -111,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				D47266F829F1D09000E9537A /* ShortURL.app */,
+				D49ADA8829F85E2A00A5C8B5 /* ShortURLTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +251,23 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		D49ADA8929F85E2A00A5C8B5 /* ShortURLTests */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADA9429F8603100A5C8B5 /* Scenes */,
+				D49ADA8C29F85E2A00A5C8B5 /* Info.plist */,
+			);
+			path = ShortURLTests;
+			sourceTree = "<group>";
+		};
+		D49ADA9429F8603100A5C8B5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADA9529F8604F00A5C8B5 /* HomeInteractorTests.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,6 +290,24 @@
 			productReference = D47266F829F1D09000E9537A /* ShortURL.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D49ADA8729F85E2A00A5C8B5 /* ShortURLTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D49ADA8F29F85E2A00A5C8B5 /* Build configuration list for PBXNativeTarget "ShortURLTests" */;
+			buildPhases = (
+				D49ADA8429F85E2A00A5C8B5 /* Sources */,
+				D49ADA8529F85E2A00A5C8B5 /* Frameworks */,
+				D49ADA8629F85E2A00A5C8B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D49ADA8E29F85E2A00A5C8B5 /* PBXTargetDependency */,
+			);
+			name = ShortURLTests;
+			productName = ShortURLTests;
+			productReference = D49ADA8829F85E2A00A5C8B5 /* ShortURLTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -261,6 +319,10 @@
 				TargetAttributes = {
 					D47266F729F1D09000E9537A = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					D49ADA8729F85E2A00A5C8B5 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = D47266F729F1D09000E9537A;
 					};
 				};
 			};
@@ -278,6 +340,7 @@
 			projectRoot = "";
 			targets = (
 				D47266F729F1D09000E9537A /* ShortURL */,
+				D49ADA8729F85E2A00A5C8B5 /* ShortURLTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,6 +352,13 @@
 			files = (
 				D472670829F1D09A00E9537A /* LaunchScreen.storyboard in Resources */,
 				D472670529F1D09A00E9537A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49ADA8629F85E2A00A5C8B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,7 +437,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D49ADA8429F85E2A00A5C8B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49ADA9629F8604F00A5C8B5 /* HomeInteractorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D49ADA8E29F85E2A00A5C8B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D47266F729F1D09000E9537A /* ShortURL */;
+			targetProxy = D49ADA8D29F85E2A00A5C8B5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D472670629F1D09A00E9537A /* LaunchScreen.storyboard */ = {
@@ -535,6 +621,44 @@
 			};
 			name = Release;
 		};
+		D49ADA9029F85E2A00A5C8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShortURLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otokansoso.ShortURLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShortURL.app/ShortURL";
+			};
+			name = Debug;
+		};
+		D49ADA9129F85E2A00A5C8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShortURLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otokansoso.ShortURLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShortURL.app/ShortURL";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -552,6 +676,15 @@
 			buildConfigurations = (
 				D472670D29F1D09A00E9537A /* Debug */,
 				D472670E29F1D09A00E9537A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D49ADA8F29F85E2A00A5C8B5 /* Build configuration list for PBXNativeTarget "ShortURLTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49ADA9029F85E2A00A5C8B5 /* Debug */,
+				D49ADA9129F85E2A00A5C8B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

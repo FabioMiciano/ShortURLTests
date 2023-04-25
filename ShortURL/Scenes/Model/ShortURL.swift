@@ -1,4 +1,4 @@
-struct ShortURL: Codable {
+struct ShortURL: Codable, Equatable {
     let alias: String
     let link: Link
     
@@ -6,9 +6,13 @@ struct ShortURL: Codable {
         case alias
         case link = "_links"
     }
+    
+    static func == (lhs: ShortURL, rhs: ShortURL) -> Bool {
+        return lhs.alias == rhs.alias && lhs.link == rhs.link
+    }
 }
 
-struct Link: Codable {
+struct Link: Codable, Equatable {
     let original: String
     let short: String
     
