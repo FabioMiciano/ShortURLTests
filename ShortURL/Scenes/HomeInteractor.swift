@@ -1,10 +1,3 @@
-//
-//  HomeInteractor.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 20/04/23.
-//
-
 import Foundation
 
 protocol HomeInteracting {
@@ -21,6 +14,7 @@ final class HomeInteractor: HomeInteracting {
         self.presenter = presenter
     }
     
+// PRAGMA MARK: -- PUBLIC FUNCTIONS --
     func pushToShortURL(url: String) {
         service.submitURLToShort(url: url) {[weak self] result in
             switch result {
@@ -42,7 +36,11 @@ final class HomeInteractor: HomeInteracting {
         }
     }
     
-    private func saveLocal(model: ShortURL) {
+}
+
+// PRAGMA MARK: -- PRIVATE FUNCTIONS --
+private extension HomeInteractor {
+    func saveLocal(model: ShortURL) {
         do {
             try service.saveLocalDataSource(item: model)
         } catch {

@@ -1,10 +1,3 @@
-//
-//  HomeFactory.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 25/04/23.
-//
-
 import Foundation
 import UIKit
 

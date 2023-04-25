@@ -1,10 +1,3 @@
-//
-//  HomeService.swift
-//  ShortURL
-//
-//  Created by Fabio Miciano on 24/04/23.
-//
-
 import Foundation
 
 protocol HomeServicing {
@@ -22,6 +15,7 @@ final class HomeService: HomeServicing {
         self.local = local
     }
     
+// PRAGMA MARK: -- PUBLIC FUNCTIONS --
     func submitURLToShort(url: String, completion: @escaping(Result<ShortURL, APIError>) -> Void) {
         let route = APIRoute.submit(url: url)
         network.execute(from: route) { (result: Result<ShortURL, APIError>) in
