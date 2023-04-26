@@ -35,6 +35,10 @@
 		D49ADA8129F8506F00A5C8B5 /* LocalDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA8029F8506F00A5C8B5 /* LocalDataManager.swift */; };
 		D49ADA9629F8604F00A5C8B5 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA9529F8604F00A5C8B5 /* HomeInteractorTests.swift */; };
 		D49ADA9E29F868D000A5C8B5 /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADA9D29F868D000A5C8B5 /* HomePresenterTests.swift */; };
+		D49ADAA229F86E0200A5C8B5 /* HomeServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAA129F86E0200A5C8B5 /* HomeServiceTests.swift */; };
+		D49ADAA829F87F9500A5C8B5 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAA729F87F9500A5C8B5 /* NetworkManagerTests.swift */; };
+		D49ADAAC29F87FAA00A5C8B5 /* LocalDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAAB29F87FAA00A5C8B5 /* LocalDataManagerTests.swift */; };
+		D49ADAB029F8BE1C00A5C8B5 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAAF29F8BE1C00A5C8B5 /* URLSessionMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		D49ADA8C29F85E2A00A5C8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D49ADA9529F8604F00A5C8B5 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 		D49ADA9D29F868D000A5C8B5 /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		D49ADAA129F86E0200A5C8B5 /* HomeServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceTests.swift; sourceTree = "<group>"; };
+		D49ADAA729F87F9500A5C8B5 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		D49ADAAB29F87FAA00A5C8B5 /* LocalDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManagerTests.swift; sourceTree = "<group>"; };
+		D49ADAAF29F8BE1C00A5C8B5 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +264,8 @@
 		D49ADA8929F85E2A00A5C8B5 /* ShortURLTests */ = {
 			isa = PBXGroup;
 			children = (
+				D49ADAA629F87F8100A5C8B5 /* Local */,
+				D49ADAA529F87F7B00A5C8B5 /* Network */,
 				D49ADA9429F8603100A5C8B5 /* Scenes */,
 				D49ADA8C29F85E2A00A5C8B5 /* Info.plist */,
 			);
@@ -267,8 +277,26 @@
 			children = (
 				D49ADA9529F8604F00A5C8B5 /* HomeInteractorTests.swift */,
 				D49ADA9D29F868D000A5C8B5 /* HomePresenterTests.swift */,
+				D49ADAA129F86E0200A5C8B5 /* HomeServiceTests.swift */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		D49ADAA529F87F7B00A5C8B5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADAA729F87F9500A5C8B5 /* NetworkManagerTests.swift */,
+				D49ADAAF29F8BE1C00A5C8B5 /* URLSessionMock.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D49ADAA629F87F8100A5C8B5 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADAAB29F87FAA00A5C8B5 /* LocalDataManagerTests.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -444,6 +472,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D49ADAB029F8BE1C00A5C8B5 /* URLSessionMock.swift in Sources */,
+				D49ADAAC29F87FAA00A5C8B5 /* LocalDataManagerTests.swift in Sources */,
+				D49ADAA829F87F9500A5C8B5 /* NetworkManagerTests.swift in Sources */,
+				D49ADAA229F86E0200A5C8B5 /* HomeServiceTests.swift in Sources */,
 				D49ADA9629F8604F00A5C8B5 /* HomeInteractorTests.swift in Sources */,
 				D49ADA9E29F868D000A5C8B5 /* HomePresenterTests.swift in Sources */,
 			);

@@ -1,7 +1,6 @@
 import Foundation
 
 protocol NetworkManaging {
-    init(session: URLSession, parser: Parser)
     func execute<T: Codable>(from endpoint: APIRoute, completion: @escaping (Result<T, APIError>) -> Void)
 }
 
