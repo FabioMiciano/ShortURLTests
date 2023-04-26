@@ -29,6 +29,7 @@ final class HomeView: UIView {
         textField.placeholder = "http://www.google.com"
         textField.borderStyle = .roundedRect
         textField.accessibilityIdentifier = "urlTextField"
+        textField.delegate = self
         textField.accessibilityHint = "Digite uma URL para ser comprimida"
         return textField
     }()
@@ -63,6 +64,11 @@ final class HomeView: UIView {
     @available(*, unavailable)
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        endEditing(true)
+        super.touchesBegan(touches, with: event)
     }
     
 // PRAGMA MARK: - PUBLIC FUNCS -
@@ -151,6 +157,13 @@ extension HomeView: UICollectionViewDataSource {
         let model = dataSource[indexPath.row]
         cell.setup(shortURL: model.link.short, originURL: model.link.original)
         return cell
+    }
+}
+
+extension HomeView: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 
