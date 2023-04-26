@@ -39,6 +39,7 @@
 		D49ADAA829F87F9500A5C8B5 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAA729F87F9500A5C8B5 /* NetworkManagerTests.swift */; };
 		D49ADAAC29F87FAA00A5C8B5 /* LocalDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAAB29F87FAA00A5C8B5 /* LocalDataManagerTests.swift */; };
 		D49ADAB029F8BE1C00A5C8B5 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAAF29F8BE1C00A5C8B5 /* URLSessionMock.swift */; };
+		D49ADAB629F96E6900A5C8B5 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAB529F96E6900A5C8B5 /* ParserTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		D49ADAA729F87F9500A5C8B5 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		D49ADAAB29F87FAA00A5C8B5 /* LocalDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManagerTests.swift; sourceTree = "<group>"; };
 		D49ADAAF29F8BE1C00A5C8B5 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		D49ADAB529F96E6900A5C8B5 /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +289,7 @@
 			children = (
 				D49ADAA729F87F9500A5C8B5 /* NetworkManagerTests.swift */,
 				D49ADAAF29F8BE1C00A5C8B5 /* URLSessionMock.swift */,
+				D49ADAB529F96E6900A5C8B5 /* ParserTests.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -476,6 +479,7 @@
 				D49ADAAC29F87FAA00A5C8B5 /* LocalDataManagerTests.swift in Sources */,
 				D49ADAA829F87F9500A5C8B5 /* NetworkManagerTests.swift in Sources */,
 				D49ADAA229F86E0200A5C8B5 /* HomeServiceTests.swift in Sources */,
+				D49ADAB629F96E6900A5C8B5 /* ParserTests.swift in Sources */,
 				D49ADA9629F8604F00A5C8B5 /* HomeInteractorTests.swift in Sources */,
 				D49ADA9E29F868D000A5C8B5 /* HomePresenterTests.swift in Sources */,
 			);

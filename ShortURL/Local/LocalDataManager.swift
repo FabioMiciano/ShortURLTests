@@ -15,7 +15,7 @@ final class LocalDataManager: LocalDataManaging {
     }
  
 // PRAGMA MARK: -- PUBLIC FUNTIONS --
-    func save<T>(item: T) throws where T : Decodable, T : Encodable {
+    func save<T: Codable>(item: T) throws {
         var list:[T] = try load()
         list.append(item)
         let dataList = try JSONEncoder().encode(list)
@@ -23,6 +23,7 @@ final class LocalDataManager: LocalDataManaging {
     }
     
     func load<T: Codable>() throws -> [T] {
+        
         guard
             let data = userDefaults.data(forKey: key),
             let items = try? JSONDecoder().decode([T].self, from: data) else {
