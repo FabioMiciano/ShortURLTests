@@ -183,6 +183,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SFFontFeatures/SFFontFeatures.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
 fi
+if [[ "$CONFIGURATION" == "UITests" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/SFFontFeatures/SFFontFeatures.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework"
+fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi

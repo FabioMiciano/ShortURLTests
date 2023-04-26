@@ -23,6 +23,16 @@
                ReferencedContainer = "container:ShortURL.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D49ADABC29F9801E00A5C8B5"
+               BuildableName = "ShortURLUITests.xctest"
+               BlueprintName = "ShortURLUITests"
+               ReferencedContainer = "container:ShortURL.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

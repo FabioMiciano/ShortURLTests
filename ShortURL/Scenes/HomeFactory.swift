@@ -8,7 +8,6 @@ enum HomeFactory {
         let interactor = HomeInteractor(service: service, presenter: presenter)
         let controller = HomeViewController(interactor: interactor)
         presenter.display = controller
-        
         return controller
     }
 }

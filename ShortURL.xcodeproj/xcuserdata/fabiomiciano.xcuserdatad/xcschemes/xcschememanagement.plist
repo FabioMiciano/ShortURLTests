@@ -7,12 +7,17 @@
 		<key>ShortURL.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>5</integer>
 		</dict>
 		<key>ShortURLTests.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>4</integer>
+		</dict>
+		<key>ShortURLUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>D49ADA8729F85E2A00A5C8B5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D49ADABC29F9801E00A5C8B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

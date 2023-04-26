@@ -40,10 +40,18 @@
 		D49ADAAC29F87FAA00A5C8B5 /* LocalDataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAAB29F87FAA00A5C8B5 /* LocalDataManagerTests.swift */; };
 		D49ADAB029F8BE1C00A5C8B5 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAAF29F8BE1C00A5C8B5 /* URLSessionMock.swift */; };
 		D49ADAB629F96E6900A5C8B5 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADAB529F96E6900A5C8B5 /* ParserTests.swift */; };
+		D49ADADB29F9ABD400A5C8B5 /* HomeViewControllerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D49ADADA29F9ABD400A5C8B5 /* HomeViewControllerUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		D49ADA8D29F85E2A00A5C8B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D47266F029F1D09000E9537A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D47266F729F1D09000E9537A;
+			remoteInfo = ShortURL;
+		};
+		D49ADAC229F9801E00A5C8B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D47266F029F1D09000E9537A /* Project object */;
 			proxyType = 1;
@@ -55,6 +63,7 @@
 /* Begin PBXFileReference section */
 		34801A51430B8754E526C621 /* Pods-ShortURL.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortURL.debug.xcconfig"; path = "Target Support Files/Pods-ShortURL/Pods-ShortURL.debug.xcconfig"; sourceTree = "<group>"; };
 		51235C9043F5102344655489 /* Pods_ShortURL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShortURL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		684E495F7790A97EBB1D15C5 /* Pods-ShortURL.uitests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortURL.uitests.xcconfig"; path = "Target Support Files/Pods-ShortURL/Pods-ShortURL.uitests.xcconfig"; sourceTree = "<group>"; };
 		7E7A5A076976012C8D3F56C4 /* Pods-ShortURL.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShortURL.release.xcconfig"; path = "Target Support Files/Pods-ShortURL/Pods-ShortURL.release.xcconfig"; sourceTree = "<group>"; };
 		D47266F829F1D09000E9537A /* ShortURL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShortURL.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47266FB29F1D09000E9537A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +101,10 @@
 		D49ADAAB29F87FAA00A5C8B5 /* LocalDataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataManagerTests.swift; sourceTree = "<group>"; };
 		D49ADAAF29F8BE1C00A5C8B5 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		D49ADAB529F96E6900A5C8B5 /* ParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
+		D49ADABD29F9801E00A5C8B5 /* ShortURLUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShortURLUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D49ADAC129F9801E00A5C8B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D49ADACD29F9AB0400A5C8B5 /* ShortURLUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShortURLUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		D49ADADA29F9ABD400A5C8B5 /* HomeViewControllerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerUITests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +123,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D49ADABA29F9801E00A5C8B5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,6 +138,7 @@
 			children = (
 				34801A51430B8754E526C621 /* Pods-ShortURL.debug.xcconfig */,
 				7E7A5A076976012C8D3F56C4 /* Pods-ShortURL.release.xcconfig */,
+				684E495F7790A97EBB1D15C5 /* Pods-ShortURL.uitests.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -135,6 +156,7 @@
 			children = (
 				D47266FA29F1D09000E9537A /* ShortURL */,
 				D49ADA8929F85E2A00A5C8B5 /* ShortURLTests */,
+				D49ADABE29F9801E00A5C8B5 /* ShortURLUITests */,
 				D47266F929F1D09000E9537A /* Products */,
 				410D3F6D88571DFBEBAAEFF0 /* Pods */,
 				90CEFA6EE25D1B4A05A6EA6C /* Frameworks */,
@@ -146,6 +168,7 @@
 			children = (
 				D47266F829F1D09000E9537A /* ShortURL.app */,
 				D49ADA8829F85E2A00A5C8B5 /* ShortURLTests.xctest */,
+				D49ADABD29F9801E00A5C8B5 /* ShortURLUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -302,6 +325,16 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		D49ADABE29F9801E00A5C8B5 /* ShortURLUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D49ADAC129F9801E00A5C8B5 /* Info.plist */,
+				D49ADACD29F9AB0400A5C8B5 /* ShortURLUITests-Bridging-Header.h */,
+				D49ADADA29F9ABD400A5C8B5 /* HomeViewControllerUITests.swift */,
+			);
+			path = ShortURLUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -342,6 +375,24 @@
 			productReference = D49ADA8829F85E2A00A5C8B5 /* ShortURLTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D49ADABC29F9801E00A5C8B5 /* ShortURLUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D49ADAC429F9801E00A5C8B5 /* Build configuration list for PBXNativeTarget "ShortURLUITests" */;
+			buildPhases = (
+				D49ADAB929F9801E00A5C8B5 /* Sources */,
+				D49ADABA29F9801E00A5C8B5 /* Frameworks */,
+				D49ADABB29F9801E00A5C8B5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D49ADAC329F9801E00A5C8B5 /* PBXTargetDependency */,
+			);
+			name = ShortURLUITests;
+			productName = ShortURLUITests;
+			productReference = D49ADABD29F9801E00A5C8B5 /* ShortURLUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -356,6 +407,11 @@
 					};
 					D49ADA8729F85E2A00A5C8B5 = {
 						CreatedOnToolsVersion = 12.4;
+						TestTargetID = D47266F729F1D09000E9537A;
+					};
+					D49ADABC29F9801E00A5C8B5 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 						TestTargetID = D47266F729F1D09000E9537A;
 					};
 				};
@@ -375,6 +431,7 @@
 			targets = (
 				D47266F729F1D09000E9537A /* ShortURL */,
 				D49ADA8729F85E2A00A5C8B5 /* ShortURLTests */,
+				D49ADABC29F9801E00A5C8B5 /* ShortURLUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -390,6 +447,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D49ADA8629F85E2A00A5C8B5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D49ADABB29F9801E00A5C8B5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -485,6 +549,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D49ADAB929F9801E00A5C8B5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D49ADADB29F9ABD400A5C8B5 /* HomeViewControllerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -492,6 +564,11 @@
 			isa = PBXTargetDependency;
 			target = D47266F729F1D09000E9537A /* ShortURL */;
 			targetProxy = D49ADA8D29F85E2A00A5C8B5 /* PBXContainerItemProxy */;
+		};
+		D49ADAC329F9801E00A5C8B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D47266F729F1D09000E9537A /* ShortURL */;
+			targetProxy = D49ADAC229F9801E00A5C8B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -559,6 +636,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IS_UI_TESTING = NO;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -614,6 +692,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IS_UI_TESTING = NO;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -699,6 +778,171 @@
 			};
 			name = Release;
 		};
+		D49ADAC529F9801E00A5C8B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShortURLUITests/Info.plist;
+				IS_UI_TESTING = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otokansoso.ShortURLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShortURLUITests/ShortURLUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShortURL;
+			};
+			name = Debug;
+		};
+		D49ADAC629F9801E00A5C8B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShortURLUITests/Info.plist;
+				IS_UI_TESTING = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otokansoso.ShortURLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShortURLUITests/ShortURLUITests-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShortURL;
+			};
+			name = Release;
+		};
+		D49ADAF129F9B7FF00A5C8B5 /* UITests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IS_UI_TESTING = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = UITests;
+		};
+		D49ADAF229F9B7FF00A5C8B5 /* UITests */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 684E495F7790A97EBB1D15C5 /* Pods-ShortURL.uitests.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShortURL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otokansoso.ShortURL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = UITests;
+		};
+		D49ADAF329F9B7FF00A5C8B5 /* UITests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShortURLTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otokansoso.ShortURLTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShortURL.app/ShortURL";
+			};
+			name = UITests;
+		};
+		D49ADAF429F9B7FF00A5C8B5 /* UITests */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ShortURLUITests/Info.plist;
+				IS_UI_TESTING = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otokansoso.ShortURLUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ShortURLUITests/ShortURLUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ShortURL;
+			};
+			name = UITests;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -706,6 +950,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D472670A29F1D09A00E9537A /* Debug */,
+				D49ADAF129F9B7FF00A5C8B5 /* UITests */,
 				D472670B29F1D09A00E9537A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -715,6 +960,7 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D472670D29F1D09A00E9537A /* Debug */,
+				D49ADAF229F9B7FF00A5C8B5 /* UITests */,
 				D472670E29F1D09A00E9537A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -724,7 +970,18 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D49ADA9029F85E2A00A5C8B5 /* Debug */,
+				D49ADAF329F9B7FF00A5C8B5 /* UITests */,
 				D49ADA9129F85E2A00A5C8B5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D49ADAC429F9801E00A5C8B5 /* Build configuration list for PBXNativeTarget "ShortURLUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D49ADAC529F9801E00A5C8B5 /* Debug */,
+				D49ADAF429F9B7FF00A5C8B5 /* UITests */,
+				D49ADAC629F9801E00A5C8B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

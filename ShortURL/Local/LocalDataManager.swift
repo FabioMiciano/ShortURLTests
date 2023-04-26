@@ -11,7 +11,13 @@ final class LocalDataManager: LocalDataManaging {
     
     init(userDefaults: UserDefaults = .standard, key: String) {
         self.userDefaults = userDefaults
-        self.key = key
+        
+        if let isUITesting = ProcessInfo.processInfo.environment["__XCODE_BUILT_PRODUCTS_DIR_PATHS"], isUITesting.contains("UITest"){
+            self.key = "UITESTING"
+        } else {
+            self.key = key
+        }
+        
     }
  
 // PRAGMA MARK: -- PUBLIC FUNTIONS --

@@ -28,6 +28,8 @@ final class HomeView: UIView {
         let textField = UITextField()
         textField.placeholder = "http://www.google.com"
         textField.borderStyle = .roundedRect
+        textField.accessibilityIdentifier = "urlTextField"
+        textField.accessibilityHint = "Digite uma URL para ser comprimida"
         return textField
     }()
     
@@ -36,6 +38,7 @@ final class HomeView: UIView {
         button.setTitle("Short", for: .normal)
         button.setTitleColor(.purple, for: .normal)
         button.addTarget(self, action: #selector(actionShortURL), for: .touchUpInside)
+        button.accessibilityIdentifier = "ShortButton"
         return button
     }()
     
@@ -44,6 +47,7 @@ final class HomeView: UIView {
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
         collectionView.register(HomeViewCell.self, forCellWithReuseIdentifier: HomeViewCell.identifier)
+        collectionView.accessibilityIdentifier = "collection"
         return collectionView
     }()
     
