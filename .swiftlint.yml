@@ -86,10 +86,12 @@ opt_in_rules:
   - yoda_condition
 
 excluded:
-  - UITests
+  - ShortURLTests
+  - ShortURLUITests
   - Pods/
   - ../Pods
-  - AppDelegate.swift
+  - ShortURL/AppDelegate.swift
+  - ShortURL/SceneDelegate.swift
 
 file_length:
   warning: 600

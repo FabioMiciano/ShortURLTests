@@ -347,6 +347,7 @@
 				D47266F529F1D09000E9537A /* Frameworks */,
 				D47266F629F1D09000E9537A /* Resources */,
 				4E2F3C3F598B4EB6D383D1E3 /* [CP] Embed Pods Frameworks */,
+				D49ADB0929F9BF2200A5C8B5 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -501,6 +502,24 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShortURL/Pods-ShortURL-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		D49ADB0929F9BF2200A5C8B5 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\" --config \"${PROJECT_DIR}/.swiftlint.yml\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

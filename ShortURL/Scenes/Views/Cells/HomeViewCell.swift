@@ -3,7 +3,7 @@ import UIKit
 import SnapKit
 import SwiftUI
 
-// PRAGMA MARK: -- LAYOUT CONSTANTS --
+// PRAGMA MARK: - LAYOUT CONSTANTS -
 extension HomeViewCell.Layout {
     enum Font {
         static let title: CGFloat = 16
@@ -24,7 +24,7 @@ final class HomeViewCell: UICollectionViewCell {
     
     static let identifier = String(describing: HomeViewCell.self)
     
-// PRAGMA MARK: -- LAYOUT COMPONENTS --
+// PRAGMA MARK: - LAYOUT COMPONENTS -
     private lazy var shortURL: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: Layout.Font.title, weight: .semibold)
@@ -38,7 +38,7 @@ final class HomeViewCell: UICollectionViewCell {
         return label
     }()
     
-// PRAGMA MARK: -- PUBLIC FUNCS --
+// PRAGMA MARK: - PUBLIC FUNCS -
     func setup(shortURL: String, originURL: String) {
         self.shortURL.text = shortURL
         self.originURL.text = originURL
@@ -46,7 +46,7 @@ final class HomeViewCell: UICollectionViewCell {
     }
 }
 
-// PRAGMA MARK: -- BUILDING LAYOUT --
+// PRAGMA MARK: - BUILDING LAYOUT -
 extension HomeViewCell: ViewConfiguration {
     func createHyerarchy() {
         addSubview(shortURL)
@@ -72,7 +72,7 @@ extension HomeViewCell: ViewConfiguration {
     }
 }
 
-// PRAGMA MARK: -- SWIFTUI PREVIEW ONLY DEV --
+// PRAGMA MARK: - SWIFTUI PREVIEW ONLY DEV -
 #if DEBUG
 struct HomeViewCell_Preview: PreviewProvider {
     static var previews: some View {

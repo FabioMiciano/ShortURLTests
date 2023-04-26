@@ -2,14 +2,14 @@ import Foundation
 import UIKit
 import SwiftUI
 
-// PRAGMA MARK: -- SNACKBAR TYPES --
+// PRAGMA MARK: - SNACKBAR TYPES -
 enum SnackBarType {
     case success
     case warning
     case error
 }
 
-// PRAGMA MARK: -- LAYOUT CONSTANTS --
+// PRAGMA MARK: - LAYOUT CONSTANTS -
 extension Snackbar.Layout {
     enum Font {
         static let numberOfLines = 2
@@ -17,9 +17,9 @@ extension Snackbar.Layout {
     }
     
     enum Colors {
-        static let success = UIColor(red: 0.30, green: 0.87, blue: 0.33, alpha: 1.00)
-        static let warning = UIColor(red: 0.12, green: 0.12, blue: 0.32, alpha: 1.00)
-        static let error = UIColor(red: 0.87, green: 0.30, blue: 0.33, alpha: 1.00)
+        static let success = #colorLiteral(red: 0.30, green: 0.87, blue: 0.33, alpha: 1.00)
+        static let warning = #colorLiteral(red: 0.12, green: 0.12, blue: 0.32, alpha: 1.00)
+        static let error = #colorLiteral(red: 0.87, green: 0.30, blue: 0.33, alpha: 1.00)
     }
     
     enum Size {
@@ -31,7 +31,7 @@ extension Snackbar.Layout {
 final class Snackbar: UIView {
     fileprivate enum Layout {}
     
-// PRAGMA MARK: -- LAYOUT COMPONENTS --
+// PRAGMA MARK: - LAYOUT COMPONENTS -
     private lazy var title: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
@@ -40,7 +40,6 @@ final class Snackbar: UIView {
         label.font = UIFont.systemFont(ofSize: Layout.Font.size, weight: .bold)
         return label
     }()
-    
     
     init(title: String, type: SnackBarType) {
         super.init(frame: .zero)
@@ -55,7 +54,7 @@ final class Snackbar: UIView {
     }
 }
 
-// PRAGMA MARK: -- PRIVATE FUNCTIONS --
+// PRAGMA MARK: - PRIVATE FUNCTIONS -
 private extension Snackbar {
     func setupOf(type: SnackBarType) {
         switch type {
@@ -69,7 +68,7 @@ private extension Snackbar {
     }
 }
 
-// PRAGMA MARK: -- BUILDING LAYOUT --
+// PRAGMA MARK: - BUILDING LAYOUT -
 extension Snackbar: ViewConfiguration {
     func setupViewConfiguration() {
         self.layer.cornerRadius = Layout.Size.cornerRadius
@@ -91,7 +90,7 @@ extension Snackbar: ViewConfiguration {
     }
 }
 
-// PRAGMA MARK: -- SWIFTUI PREVIEW ONLY DEV --
+// PRAGMA MARK: - SWIFTUI PREVIEW ONLY DEV -
 #if DEBUG
 struct Snackbar_Preview: PreviewProvider {
     static var previews: some View {

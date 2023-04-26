@@ -14,7 +14,7 @@ final class NetworkManager: NetworkManaging {
         self.parser = parser
     }
 
-// PRAGMA MARK: -- PUBLIC FUNTIONS --
+// PRAGMA MARK: - PUBLIC FUNTIONS -
     func execute<T: Codable>(from endpoint: APIRoute, completion: @escaping (Result<T, APIError>) -> Void) {
         guard let url = baseURL?.appendingPathComponent(endpoint.path) else { return }
         var request = URLRequest(url: url)
@@ -25,7 +25,7 @@ final class NetworkManager: NetworkManaging {
             request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
         }
         
-        session.dataTask(with: request) {[weak self] (data, response, error) in
+        session.dataTask(with: request) {[weak self] data, response, error in
             if let hasError = self?.isError(error: error, response: response) {
                 completion(.failure(hasError))
                 return
@@ -46,11 +46,12 @@ final class NetworkManager: NetworkManaging {
             } catch {
                 completion(.failure(.decodingFailed))
             }
-        }.resume()
+        }
+        .resume()
     }
 }
 
-// PRAGMA MARK: -- PRIVATE FUNCTIONS --
+// PRAGMA MARK: - PRIVATE FUNCTIONS -
 private extension NetworkManager {
     func isError(error: Error?, response: URLResponse?) -> APIError? {
         if let error = error {

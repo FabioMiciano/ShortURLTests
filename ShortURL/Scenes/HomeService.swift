@@ -15,7 +15,7 @@ final class HomeService: HomeServicing {
         self.local = local
     }
     
-// PRAGMA MARK: -- PUBLIC FUNCTIONS --
+// PRAGMA MARK: - PUBLIC FUNCTIONS -
     func submitURLToShort(url: String, completion: @escaping(Result<ShortURL, APIError>) -> Void) {
         let route = APIRoute.submit(url: url)
         network.execute(from: route) { (result: Result<ShortURL, APIError>) in

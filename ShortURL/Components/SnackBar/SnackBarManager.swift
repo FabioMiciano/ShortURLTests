@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-// PRAGMA MARK: -- LAYOUT CONSTANTS --
+// PRAGMA MARK: - LAYOUT CONSTANTS -
 extension SnackBarManager.Layout {
     enum Offset {
         static let base16: CGFloat = 16
@@ -18,14 +18,14 @@ extension SnackBarManager.Layout {
 final class SnackBarManager {
     fileprivate enum Layout {}
     
-// PRAGMA MARK: -- PUBLIC FUNCTIONS --
-    func show(_ snackBar: Snackbar, onTopof view: UIView, duration: TimeInterval = Layout.Animation.defaultDuration, completion: (()->Void)? = nil) {
+// PRAGMA MARK: - PUBLIC FUNCTIONS -
+    func show(_ snackBar: Snackbar, onTopof view: UIView, duration: TimeInterval = Layout.Animation.defaultDuration, completion: (() -> Void)? = nil) {
         setupLayout(snackBar, superview: view)
         displaySnackBar(snackBar, forDurarion: duration, completion: completion)
     }
 }
 
-// PRAGMA MARK: -- PRIVATE FUNCTIONS --
+// PRAGMA MARK: - PRIVATE FUNCTIONS -
 private extension SnackBarManager {
     func setupLayout(_ snackBar: Snackbar, superview: UIView) {
         superview.addSubview(snackBar)
@@ -36,7 +36,7 @@ private extension SnackBarManager {
         }
     }
     
-    func displaySnackBar(_ snackBar: Snackbar, forDurarion displayDuration: TimeInterval, completion: (()->Void)? = nil) {
+    func displaySnackBar(_ snackBar: Snackbar, forDurarion displayDuration: TimeInterval, completion: ( () -> Void)? = nil) {
         snackBar.alpha = Layout.Animation.startAlpha
         
         let fadeInAnimation = UIViewPropertyAnimator(duration: displayDuration, curve: .easeIn) {

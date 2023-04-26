@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import SwiftUI
 
-// PRAGMA MARK: -- PROTOCOL TO UPDATE VIEW --
+// PRAGMA MARK: - PROTOCOL TO UPDATE VIEW -
 protocol HomeDisplay: AnyObject {
     func loadLocal(dataSource: [ShortURL])
     func addShortURLToView(model: ShortURL)
@@ -28,9 +28,8 @@ final class HomeViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
-//PRAGMA MARK: -- LIFE CICLE --
+// PRAGMA MARK: - LIFE CICLE -
     override func loadView() {
-        super.loadView()
         view = homeView
     }
     
@@ -40,14 +39,14 @@ final class HomeViewController: UIViewController {
     }
 }
 
-//PRAGMA MARK: -- HOME VIEW DELEGATE IMPLEMENTATION --
+// PRAGMA MARK: - HOME VIEW DELEGATE IMPLEMENTATION -
 extension HomeViewController: HomeViewDelegate {
     func pushToShort(url: String) {
         interactor.pushToShortURL(url: url)
     }
 }
 
-//PRAGMA MARK: -- HOMEDISPLAY PROTOCOL IMPLEMENTATION --
+// PRAGMA MARK: - HOMEDISPLAY PROTOCOL IMPLEMENTATION -
 extension HomeViewController: HomeDisplay {
     func showErrorSnackBar(error: String) {
         let snackBar = Snackbar(title: error, type: .error)
@@ -63,7 +62,7 @@ extension HomeViewController: HomeDisplay {
     }
 }
 
-// PRAGMA MARK: -- SWIFTUI PREVIEW ONLY DEV --
+// PRAGMA MARK: - SWIFTUI PREVIEW ONLY DEV -
 #if DEBUG
 struct HomeViewController_Preview: PreviewProvider {
     static var previews: some View {

@@ -10,67 +10,67 @@ final class HomePresenterTests: XCTestCase {
     }()
     
     func testAddShortURLToView_WhenReceiveValidModel_ShouldCallAddFunctionInDisplay() {
-        // given
+        // Given
         let shortURL = ShortURL(alias: "1313", link: Link(original: "https://www.example.com", short: "https://localhost:3000/alias/1313"))
         
-        // when
+        // When
         sut.addShortURLToView(model: shortURL)
         
-        // then
+        // Then
         XCTAssertEqual(displaySpy.addShortURLToViewCalledCount, 1)
         XCTAssertEqual(displaySpy.addShortURLToViewModel, shortURL)
     }
     
     func testShowError_WhenReceiveRequestFailedErrorType_ShouldCallSnackBarInDisplay() {
-        // given
+        // Given
         let error = APIError.requestFailed(error: NSError(domain: "Test", code: 0, userInfo: nil))
         
-        // when
+        // When
         sut.showError(error: error)
         
-        // then
+        // Then
         XCTAssertEqual(displaySpy.showErrorSnackBarCalledCount, 1)
         XCTAssertNotNil(displaySpy.showErrorSnackBarMessage)
     }
     
     func testShowError_WhenReceiveRequestFailedWithMessageErrorType_ShouldCallSnackBarInDisplay() {
-        // given
+        // Given
         let statusCode = 400
         let message = "Bad Request"
         let error = APIError.requestFailedWith(statusCode: statusCode, message: message)
         
-        // when
+        // When
         sut.showError(error: error)
         
-        // then
+        // Then
         XCTAssertEqual(displaySpy.showErrorSnackBarCalledCount, 1)
         XCTAssertEqual(displaySpy.showErrorSnackBarMessage, "CODE: \(statusCode) | \(message)")
     }
     
     func testShowError_WhenReceiveDecodingErrorType_ShouldCallSnackBarInDisplay() {
-        // given
+        // Given
         let error = APIError.decodingFailed
         
-        // when
+        // When
         sut.showError(error: error)
         
-        // then
+        // Then
         XCTAssertEqual(displaySpy.showErrorSnackBarCalledCount, 1)
         XCTAssertEqual(displaySpy.showErrorSnackBarMessage, "Ops, algo deu errado, tente novamente")
     }
     
     func testLoadLocalList_WhenReceiveValidDataSource_ShouldCallLoadDataInDisplay() {
-        // given
+        // Given
         let dataSource = [
             ShortURL(alias: "1313", link: Link(original: "https://www.example.com/abc", short: "https://localhost:3000/1313")),
             ShortURL(alias: "1414", link: Link(original: "https://www.example.com/def", short: "https://localhost:3000/1414")),
             ShortURL(alias: "1515", link: Link(original: "https://www.example.com/ghi", short: "https://localhost:3000/1515"))
         ]
         
-        // when
+        // When
         sut.loadLocalList(dataSource: dataSource)
         
-        // then
+        // Then
         XCTAssertEqual(displaySpy.loadLocalCalledCount, 1)
         XCTAssertEqual(displaySpy.loadLocalDataSource, dataSource)
     }

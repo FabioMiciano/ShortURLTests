@@ -14,7 +14,7 @@ final class HomeInteractor: HomeInteracting {
         self.presenter = presenter
     }
     
-// PRAGMA MARK: -- PUBLIC FUNCTIONS --
+// PRAGMA MARK: - PUBLIC FUNCTIONS -
     func pushToShortURL(url: String) {
         service.submitURLToShort(url: url) {[weak self] result in
             switch result {
@@ -27,7 +27,7 @@ final class HomeInteractor: HomeInteracting {
         }
     }
     
-    func loadLocalList(){
+    func loadLocalList() {
         do {
             let dataSource = try service.loadLocalDataSource()
             presenter.loadLocalList(dataSource: dataSource)
@@ -35,10 +35,9 @@ final class HomeInteractor: HomeInteracting {
             presenter.showError(error: .decodingFailed)
         }
     }
-    
 }
 
-// PRAGMA MARK: -- PRIVATE FUNCTIONS --
+// PRAGMA MARK: - PRIVATE FUNCTIONS -
 private extension HomeInteractor {
     func saveLocal(model: ShortURL) {
         do {

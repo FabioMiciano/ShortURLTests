@@ -8,7 +8,7 @@ struct ShortURL: Codable, Equatable {
     }
     
     static func == (lhs: ShortURL, rhs: ShortURL) -> Bool {
-        return lhs.alias == rhs.alias && lhs.link == rhs.link
+        lhs.alias == rhs.alias && lhs.link == rhs.link
     }
 }
 

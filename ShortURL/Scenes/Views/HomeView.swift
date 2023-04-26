@@ -3,12 +3,12 @@ import UIKit
 import SwiftUI
 import SnapKit
 
-// PRAGMA MARK: -- HOME VIEW DELEGATE --
+// PRAGMA MARK: - HOME VIEW DELEGATE -
 protocol HomeViewDelegate: AnyObject {
     func pushToShort(url: String)
 }
 
-// PRAGMA MARK: -- LAYOUT CONSTANTS --
+// PRAGMA MARK: - LAYOUT CONSTANTS -
 extension HomeView.Layout {
     enum Offset {
         static let base08: CGFloat = 8
@@ -23,7 +23,7 @@ extension HomeView.Layout {
 final class HomeView: UIView {
     fileprivate enum Layout {}
     
-// PRAGMA MARK: -- LAYOUT COMPONENTS --
+// PRAGMA MARK: - LAYOUT COMPONENTS -
     private lazy var urlTextField: UITextField = {
         let textField = UITextField()
         textField.placeholder = "http://www.google.com"
@@ -65,7 +65,7 @@ final class HomeView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-// PRAGMA MARK: -- PUBLIC FUNCS --
+// PRAGMA MARK: - PUBLIC FUNCS -
     func apeendShortURL(model: ShortURL) {
         dataSource.append(model)
         collection.reloadData()
@@ -77,7 +77,7 @@ final class HomeView: UIView {
     }
 }
 
-// PRAGMA MARK: -- BUILDING LAYOUT --
+// PRAGMA MARK: - BUILDING LAYOUT -
 extension HomeView: ViewConfiguration {
     func createHyerarchy() {
         addSubview(urlTextField)
@@ -105,11 +105,11 @@ extension HomeView: ViewConfiguration {
     }
     
     func setupViewConfiguration() {
-        backgroundColor = UIColor(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00)
+        backgroundColor = #colorLiteral(red: 0.95, green: 0.95, blue: 0.95, alpha: 1.00)
     }
 }
 
-// PRAGMA MARK: -- BUTTON ACTIONS --
+// PRAGMA MARK: - BUTTON ACTIONS -
 @objc
 private extension HomeView {
     func actionShortURL() {
@@ -118,7 +118,7 @@ private extension HomeView {
     }
 }
 
-// PRAGMA MARK: -- PRIVATE FUNCS --
+// PRAGMA MARK: - PRIVATE FUNCS -
 private extension HomeView {
     func createLayout() -> UICollectionViewLayout {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
@@ -140,10 +140,10 @@ private extension HomeView {
     }
 }
 
-// PRAGMA MARK: -- COLLECTION VIEW DATASOURCE --
+// PRAGMA MARK: - COLLECTION VIEW DATASOURCE -
 extension HomeView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.count
+        dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -154,7 +154,7 @@ extension HomeView: UICollectionViewDataSource {
     }
 }
 
-// PRAGMA MARK: -- SWIFTUI PREVIEW ONLY DEV --
+// PRAGMA MARK: - SWIFTUI PREVIEW ONLY DEV -
 #if DEBUG
 struct HomeView_Preview: PreviewProvider {
     static var previews: some View {

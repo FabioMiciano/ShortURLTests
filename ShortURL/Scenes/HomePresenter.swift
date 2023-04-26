@@ -9,14 +9,14 @@ protocol HomePresenting {
 final class HomePresenter: HomePresenting {
     weak var display: HomeDisplay?
     
-// PRAGMA MARK: -- PUBLIC FUNCTIONS --
+// PRAGMA MARK: - PUBLIC FUNCTIONS -
     func addShortURLToView(model: ShortURL) {
         display?.addShortURLToView(model: model)
     }
     
     func showError(error: APIError) {
         switch error {
-        case .requestFailedWith(let statusCode, let message):
+        case let .requestFailedWith(statusCode, message):
             display?.showErrorSnackBar(error: "CODE: \(statusCode) | \(message)")
         case let .requestFailed(error):
             display?.showErrorSnackBar(error: error.localizedDescription)

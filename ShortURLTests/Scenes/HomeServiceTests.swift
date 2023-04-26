@@ -6,7 +6,7 @@ final class HomeServiceTests: XCTestCase {
     private lazy var localMock = LocalDataManagerMock()
     lazy var sut = HomeService(network: networkMock, local: localMock)
     
-    func testSubmitURLToShort_withValidURL_shouldCallCompletionWithSuccess() {
+    func testSubmitURLToShort_WhenReceiveValidURL_ShouldCallCompletionWithSuccess() {
         // Given
         let linkModel = Link(original: "https://www.example.com", short: "https://localhost:3000/alias/1313")
         let expectedModel = ShortURL(alias: "131313", link: linkModel)
@@ -29,7 +29,7 @@ final class HomeServiceTests: XCTestCase {
         }
     }
 
-    func testSubmitURLToShort_withInvalidURL_shouldNotCallNetworkExecute() {
+    func testSubmitURLToShort_WhenReceiveInvalidURL_ShouldExpectedFailure() {
         // Given
         let url = "invalidURL"
         let expectation = self.expectation(description: "Completion should be fail")
@@ -52,7 +52,7 @@ final class HomeServiceTests: XCTestCase {
         }
     }
 
-    func testSaveLocalDataSource_shouldCallLocalSave() throws {
+    func testSaveLocalDataSource_WhenReceiveValidModel_shouldCallLocalSave() throws {
         // Given
         let linkModel = Link(original: "https://www.example.com", short: "https://localhost:3000/alias/1313")
         let expectedModel = ShortURL(alias: "131313", link: linkModel)
@@ -65,7 +65,7 @@ final class HomeServiceTests: XCTestCase {
         XCTAssertEqual(localMock.capturedItem, expectedModel)
     }
 
-    func testLoadLocalDataSource_shouldCallLocalLoad() throws {
+    func testLoadLocalDataSource_WhenHasDataLocal_ShouldCallLocalLoad() throws {
         // Given
         let linkModel = Link(original: "https://www.example.com", short: "https://localhost:3000/alias/1313")
         let expectedModel = ShortURL(alias: "131313", link: linkModel)
